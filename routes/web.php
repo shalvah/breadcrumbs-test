@@ -25,9 +25,9 @@ use Illuminate\Support\Facades\Redis;
 
 Route::get('/', function () {
 
-    // To test this part, you'll need to start Redis on localhost
-    // Redis::enableEvents();
-    // Redis::get('something');
+    // To test this part, you'll need to start Redis on localhost (should be running already if you're using Sail)
+    Redis::enableEvents();
+    Redis::get('something');
 
     Cache::get('fgfgf');
     Cache::put('something', 'another thing');
